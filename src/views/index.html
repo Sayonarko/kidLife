@@ -1,34 +1,391 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>gulp-scss-starter</title>
-        <meta name="theme-color" content="#fff">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
-        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
-        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-        <link rel="stylesheet" href="styles/main.css">
-    </head>
-    <body>
-        @@include("../blocks/modules/header/header.html")
-        @@include("../blocks/modules/footer/footer.html")
-        <script src="js/main.js"></script>
-        <script src="js/vendor.js"></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KidLife - Частный детский сад</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="../img/svg/logo.svg" alt="kidLife">
+            </a>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" class="active">Главная</a></li>
+                    <li><a href="#">о нас</a></li>
+                    <li><a href="#">Программы</a></li>
+                    <li><a href="#">стоимость</a></li>
+                    <li><a href="#">контакты</a></li>
+                </ul>
+            </nav>
+            <div class="m-menu">
+
+            </div>
+        </div>
+    </header>
+    <section class="greeting">
+        <div class="container">
+            <h1 class="title">
+                Вас приветствует <strong>KidLife!</strong>
+            </h1>
+            <h2 class="sub-title">
+                Частный детский сад
+            </h2>
+            <h2 class="sub-title">
+                для детей от 2 до 6 лет
+            </h2>
+        </div>
+    </section>
+    <section class="about">
+        <div class="container">
+            <h2>
+                О нас
+            </h2>
+            <p>
+                Выбор первого коллектива, педагогов и, по сути, «второго дома» для своего ребенка – это очень
+                ответственный и ёмкий процесс. Ведь Ваши детки впервые будут проводить какое-то время не с любимыми
+                родителями, а в новой обстановке и учиться многому интересному, поэтому очень важно сделать правильный
+                выбор и быть уверенным в нем!
+            </p>
+            <p>
+                Мы подошли к организации нашего детского садика со всей душой, умениями, стараниями, жизненным и
+                педагогическим опытом. Все мы тоже родители и прекрасно понимаем, что нужно и что интересно деткам.
+                Индивидуальный подход, дружба, поддержка и направление на развитие тех талантов, которые непременно есть
+                в каждом ребенке – вот главные цели «KidLife». Ведь каждый маленький человек – это индивидуальность,
+                личность и гений, и мы понимаем, что, доверив нам такое сокровище, мы несем полную ответственность за
+                развитие этих качеств!
+            </p>
+            <p>
+                Сочетание индивидуального подхода и внедрение современных методик формирования личности ребенка дает
+                возможность каждому малышу раскрыться, проявить себя в коллективе, чувствовать себя комфортно и
+                безопасно.
+            </p>
+            <h3>
+                Наши преимущества и достоинства:
+            </h3>
+            <div class="row">
+                <div class="item">
+                    <div class="item__img">
+                        <img src="../img/svg/protect.svg" alt="protect">
+                    </div>
+                    <div class="item__desc">
+                        <h4 class="item__title">
+                            Закрытая охраняемая территория
+                        </h4>
+                        <p class="item__text">
+                            Для безопасного нахождения детей в учебном заведении работает круглосуточная
+                            профессиональная охрана, контролируются входы, введена пропускная система, которая исключает
+                            вход на территорию посторонних лиц.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="../img/svg/camera.svg" alt="camera">
+                    </div>
+                    <div class="item__desc">
+                        <h4 class="item__title">
+                            Видеонаблюдение
+                        </h4>
+                        <p class="item__text">
+                            Для безопасного нахождения детей в учебном заведении работает круглосуточная
+                            профессиональная охрана, контролируются входы, введена пропускная система, которая исключает
+                            вход на территорию посторонних лиц.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="../img/svg/leaf.svg" alt="leaf">
+                    </div>
+                    <div class="item__desc">
+                        <h4 class="item__title">
+                            ЭКО-питание
+
+                        </h4>
+                        <p class="item__text">
+                            Профессиональные повара с любовью готовят здоровую полезную пищу, учитывая нормы,
+                            рекомендованные Министерством охраны здоровья. Меню разработано и контролируется
+                            диет-сестрой. Продукты сертифицированы и доставляются с эко-фермы.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__img">
+                        <img src="../img/svg/calendar.svg" alt="calendar">
+                    </div>
+                    <div class="item__desc">
+                        <h4 class="item__title">
+                            Удобный график для каждого родителя
+                        </h4>
+                        <p class="item__text">
+                            Пн - Пт 08:00 - 19:00<br>
+                            Пн - Пт 09:00 - 20:00<br>
+                            Пн - Пт 10:00 - 14:00<br>
+                            Пн - Пт 15:00 - 19:00<br>
+                            Сб 10:00 - 14:00<br>
+                            Вс выходной
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="program">
+        <div class="container">
+            <h2>
+                Программы
+            </h2>
+            <div class="row">
+                <div class="program__desc">
+                    <h3 class="program__title">
+                        Программа для детей от 2 - 3 лет
+                    </h3>
+                    <div class="program__text">
+                        На данных занятиях дети учатся общаться со взрослым и сверстниками. У ребят развивается слуховое
+                        и зрительное восприятие, произвольное внимание. Все занятия носят игровой характер. Занятия
+                        проводятся блоками по 20 минут:
+                    </div>
+                    <ul class="program__list">
+                        <li class="list__item">
+                            Сенсорное развитие
+                        </li>
+                        <li class="list__item">
+                            Развитие элементарных математических понятий
+                        </li>
+                        <li class="list__item">
+                            Развитие речи
+                        </li>
+                        <li class="list__item">
+                            Развитие мелкой и крупной моторики мы используем
+                        </li>
+                        <li class="list__item">
+                            Развитие навыков конструирования
+                        </li>
+                        <li class="list__item">
+                            Развитие представлений об окружающем мире
+                        </li>
+                        <li class="list__item">
+                            Развитие творческого потенциала
+                        </li>
+                        <li class="list__item">
+                            Развитие навыков общения на английском языке, необходимых в повседневном
+                            обиходе. Разучивание песен и стихов.
+                        </li>
+                    </ul>
+                </div>
+                <div class="program__img">
+                    <img src="../img/program-1.jpg" alt="kids">
+                </div>
+            </div>
+            <div class="row">
+                <div class="program__desc">
+                    <h3 class="program__title">
+                        Программа для детей от 3-4 лет
+                    </h3>
+                    <div class="program__text">
+                        Мы научим Вашего ребенка самостоятельно мыслить, рассуждать анализировать и сравнивать различные
+                        явления и предметы. Занятия проводятся блоками по 30 минут:
+                    </div>
+                    <ul class="program__list">
+                        <li class="list__item">
+                            Математика и логика
+                        </li>
+                        <li class="list__item">
+                            Развитие речи
+                        </li>
+                        <li class="list__item">
+                            Развитие навыков конструирования
+                        </li>
+                        <li class="list__item">
+                            Развитие представлений об окружающем мире
+                        </li>
+                        <li class="list__item">
+                            Развитие психических процессов
+                        </li>
+                        <li class="list__item">
+                            Развитие творческого потенциала
+                        </li>
+                        <li class="list__item">
+                            Английский язык: расширение базового словарного запаса, необходимого в повседневном обиходе.
+                            Разучивание песен и стихов.
+                        </li>
+                    </ul>
+                </div>
+                <div class="program__img">
+                    <img src="../img/program-2.jpg" alt="pensil">
+                </div>
+            </div>
+            <div class="row">
+                <div class="program__desc">
+                    <h3 class="program__title">
+                        Программа для детей от 5-6 лет
+                    </h3>
+                    <div class="program__text">
+                        Мы дадим Вашему ребенку необходимые знания для успешного прохождения тестирования при
+                        поступлении в школу, а также разовьем интеллектуальные возможности Вашего малыша. Научим
+                        общаться со сверстниками и взрослыми. Программа по подготовке к школе включает такие разделы,
+                        как чтение, математика, логика, письмо. Занятия проводятся по 30 минут:
+                    </div>
+                    <ul class="program__list">
+                        <li class="list__item">
+                            Чтение, подготовка руки к письму
+                        </li>
+                        <li class="list__item">
+                            Математика - логика 4-6 лет
+                        </li>
+                        <li class="list__item">
+                            Форма: будет знать плоские и объемные фигуры; будет уметь различать точку, отрезок, ломаную
+                            линию - знать елементи многоугольника - стороны, вершины, углы; будет уметь построить
+                            отрезок с помощью линейки; усвоит меры длины: сантиметр, килограмм, литр.
+                        </li>
+                        <li class="list__item">
+                            Память, мышление, внимание и речь
+                        </li>
+                        <li class="list__item">
+                            Общее развитие
+                        </li>
+                        <li class="list__item">
+                            Развитие творческого потенциала
+                        </li>
+                        <li class="list__item">
+                            Английский язык: активизация базового словарного запаса, необходимого в повседневном обходе;
+                            разучивание стихов и песен.
+                        </li>
+                    </ul>
+                </div>
+                <div class="program__img">
+                    <img src="../img/program-3.jpg" alt="write">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cost">
+        <div class="container">
+            <h2>
+                Стоимость
+            </h2>
+            <strong>
+                ТОЛЬКО ЕЖЕМЕСЯЧНЫЕ ПЛАТЕЖИ, БЕЗ ВСТУПИТЕЛЬНОГО, ЕЖЕГОДНЫХ И ПРОЧИХ ВЗНОСОВ!
+            </strong>
+            <h3 class="cost__sub-title">
+                Для Вас и Ваших деток, мы предоставляем один бесплатный пробный день!
+            </h3>
+            <div class="row">
+                <div class="item">
+                    <h3 class="item__title">
+                        Полный день
+                    </h3>
+                    <div class="item__time">
+                        Пн - Пт 08:00 - 19:00<br>
+                        Пн - Пт 09:00 - 20:00
+                    </div>
+                    <ul class="item__list">
+                        <li>5-ти разовое питание;</li>
+                        <li>Развивающая программа обучения;
+                        </li>
+                        <li>Логопед, психолог;</li>
+                        <li>Творческая мастерская;
+                        </li>
+                        <li>Сон, прогулки на свежем воздухе;
+                        </li>
+                        <li>Праздники</li>
+                    </ul>
+                    <div class="item__cost">
+                        Стоимость - 7500 грн/мес.
+                    </div>
+                </div>
+                <div class="item">
+                    <h3 class="item__title">
+                        Половина дня
+                    </h3>
+                    <div class="item__time">
+                        Пн - Пт 10:00 - 14:00<br>
+                        Пн - Пт 15:00 - 19:00
+                    </div>
+                    <ul class="item__list">
+                        <li>3-х разовое питание;</li>
+                        <li>Развивающая программа обучения;
+
+                        </li>
+                        <li>Логопед, психолог;</li>
+                        <li>Творческая мастерская;
+                        </li>
+                        <li>Прогулки на свежем воздухе;
+
+                        </li>
+                        <li>Праздники</li>
+                    </ul>
+                    <div class="item__cost">
+                        Стоимость - 6200 грн/мес.
+                    </div>
+                </div>
+                <div class="item">
+                    <h3 class="item__title">
+                        Суббота 10:00 - 14:00
+                    </h3>
+                    <div class="item__time">
+                        По предварительной записи
+                    </div>
+                    <ul class="item__list">
+                        <li>3-х разовое питание;</li>
+                        <li>Развивающая программа обучения;
+
+                        </li>
+                        <li>Логопед, психолог;</li>
+                        <li>Творческая мастерская;
+                        </li>
+                        <li>Прогулки на свежем воздухе;
+
+                        </li>
+                        <li>Праздники</li>
+                    </ul>
+                    <div class="item__cost">
+                        Стоимость - 420 грн/день.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts">
+        <div class="container"></div>
+    </section>
+    <footer class="footer">
+        <div class="container"></div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/vendor.js"></script>
+</body>
+
 </html>

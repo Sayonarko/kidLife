@@ -1,7 +1,215 @@
 @import "helpers/variables";
 @import "helpers/mixins";
-@import "helpers/functions";
 @import "vendor/libs";
 @import "base/fonts";
 @import "base/general";
-@import "../blocks/modules";
+
+
+.header {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $dark-blue;
+        border-radius: 50px;
+        min-height: 100px;
+
+        .logo {}
+
+        .menu {
+            flex-grow: 1;
+            max-width: 680px;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        font-family: 'Lato', sans-serif;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 17px;
+                        letter-spacing: 0.2em;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                    }
+
+                    .active {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+
+        .m-menu {
+            width: 115px;
+            height: 80px;
+            background: url("../img/svg/deco.svg") no-repeat center center;
+        }
+    }
+}
+
+.greeting {
+    background: url("../img/greeting-bg.png") no-repeat center center;
+    text-align: center;
+    padding: 260px 0 180px 0;
+
+    strong {
+        color: $dark-blue;
+    }
+
+    .sub-title {
+        margin-top: 40px;
+    }
+}
+
+.about {
+    background: $yellow;
+    padding: 30px 0;
+
+    h3 {
+        text-align: center;
+        font-style: italic;
+    }
+
+    .row {
+        @include row-flex();
+
+        .item {
+            @include col();
+            @include size(6);
+            display: flex;
+            margin: 20px 0;
+
+            &__img {
+                display: flex;
+                justify-content: center;
+                padding: 38px 40px 0;
+
+                img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+
+            &__title {
+                font-style: italic;
+            }
+
+            &__text {
+                padding-right: 100px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.program {
+    background: $green;
+    padding: 50px 0;
+
+    .row {
+        @include row-flex();
+        margin-top: 50px;
+
+        &:nth-child(1) {
+            margin-top: 30px;
+        }
+    }
+
+    &__desc {
+        @include col();
+        @include size(6);
+
+    }
+
+    &__img {
+        @include col();
+        @include size(6);
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            object-fit: contain;
+            max-width: 585px;
+        }
+    }
+
+    &__title {
+        font-style: italic;
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    &__list {
+        .list__item {
+            font-size: 16px;
+            margin-top: 10px;
+
+            &::marker {
+                color: $pink;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.cost {
+    background: $pink;
+    padding: 50px 0;
+
+    strong {
+        margin-top: 50px;
+        text-transform: uppercase;
+        color: white;
+        display: block;
+        text-align: center;
+    }
+
+    &__sub-title {
+        margin-top: 30px;
+        color: white;
+        font-style: italic;
+        text-align: center;
+    }
+    .row {
+        @include row-flex();
+        margin-top: 50px;
+
+        .item {
+            @include col();
+            @include size(4);
+            display: flex;
+            flex-direction: column;
+            min-height: 345px;
+
+            &__time {
+                margin: 20px 0;
+            }
+
+            &__list {
+                li {
+                    margin-top: 10px;
+
+                    &::marker {
+                        color: $blue;
+                    }
+                }
+            }
+
+            &__cost {
+                margin-top: auto;
+                font-style: italic;
+                font-size: 20px;
+                color: white;
+            }
+        }
+    }
+}
