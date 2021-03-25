@@ -12,13 +12,46 @@
         justify-content: space-between;
         background: $dark-blue;
         border-radius: 50px;
-        min-height: 100px;
+        height: 100px;
 
-        .logo {}
+        @include lg-block() {
+            height: 50px;
+        }
+
+        @include md-block() {
+            height: 30px;
+            padding: 0 7px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                @include lg-block() {
+                    width: 80px;
+                }
+                @include md-block() {
+                    width: 45px;
+                }
+            }
+
+            @include lg-block() {
+                font-size: 12px;
+            }
+        }
 
         .menu {
             flex-grow: 1;
             max-width: 680px;
+
+            @include lg-block() {
+                padding: 0 50px;
+            }
+            @include md-block() {
+                display: none;
+            }
 
             ul {
                 display: flex;
@@ -36,6 +69,10 @@
                         letter-spacing: 0.2em;
                         text-transform: uppercase;
                         color: #FFFFFF;
+
+                        @include lg-block() {
+                            font-size: 12px;
+                        }
                     }
 
                     .active {
@@ -49,6 +86,40 @@
             width: 115px;
             height: 80px;
             background: url("../img/svg/deco.svg") no-repeat center center;
+            background-size: contain;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include lg-block() {
+                height: 50px;
+                width: 55px;
+            }
+
+            @include md-block() {
+                width: 33px;
+            }
+
+            .burger {
+                display: none;
+                flex-direction: column;
+                padding-bottom: 2px;
+
+                @include md-block() {
+                    display: flex;
+                }
+
+                &__line {
+                    background: #fff;
+                    height: 3px;
+                    width: 15px;
+                    border-radius: 1px;
+
+                    & + .burger__line {
+                        margin-top: 1px;
+                    }
+                }
+            }
         }
     }
 }
@@ -58,12 +129,21 @@
     text-align: center;
     padding: 260px 0 180px 0;
 
+    @include lg-block() {
+        padding: 100px 0;
+        background-position-y: top;
+    }
+
     strong {
         color: $dark-blue;
     }
 
     .sub-title {
         margin-top: 40px;
+
+        @include lg-block() {
+            margin-top: 20px;
+        }
     }
 }
 
@@ -82,17 +162,32 @@
         .item {
             @include col();
             @include size(6);
+            @include size-lg(12);
             display: flex;
             margin: 20px 0;
+
+            @include lg-block() {
+                padding-left: 80px;
+                margin: 5px 0;
+            }
 
             &__img {
                 display: flex;
                 justify-content: center;
                 padding: 38px 40px 0;
 
+                @include lg-block() {
+                    padding: 25px 20px 0;
+                }
+
                 img {
                     width: 70px;
                     height: 70px;
+
+                    @include lg-block() {
+                        width: 45px;
+                        height: 45px;
+                    }
                 }
             }
 
@@ -103,6 +198,11 @@
             &__text {
                 padding-right: 100px;
                 font-size: 14px;
+
+                @include lg-block() {
+                    padding-right: 0;
+                    margin: 5px 0 0;
+                }
             }
         }
     }
@@ -115,6 +215,11 @@
     .row {
         @include row-flex();
         margin-top: 50px;
+
+        @include lg-block() {
+            margin-top: 30px;
+        }
+
 
         &:nth-child(1) {
             margin-top: 30px;
@@ -134,8 +239,14 @@
         justify-content: flex-end;
 
         img {
-            object-fit: contain;
+            object-fit: cover;
+            height: 100%;
             max-width: 585px;
+
+            @include lg-block() {
+                object-fit: cover;
+                max-width: 360px;
+            }
         }
     }
 
@@ -146,12 +257,21 @@
     &__text {
         margin-top: 20px;
         font-size: 16px;
+
+        @include lg-block() {
+            font-size: 12px;
+        }
     }
 
     &__list {
         .list__item {
             font-size: 16px;
             margin-top: 10px;
+
+            @include lg-block() {
+                margin-top: 3px;
+                font-size: 12px;
+            }
 
             &::marker {
                 color: $pink;
@@ -165,12 +285,21 @@
     background: $pink;
     padding: 50px 0;
 
+    @include lg-block() {
+        padding: 30px 0;
+    }
+
     strong {
         margin-top: 50px;
         text-transform: uppercase;
         color: white;
         display: block;
         text-align: center;
+
+        @include lg-block() {
+            font-size: 12px;
+            margin-top: 30px;
+        }
     }
 
     &__sub-title {
@@ -178,25 +307,49 @@
         color: white;
         font-style: italic;
         text-align: center;
+
+        @include lg-block() {
+            font-size: 14px;
+            margin-top: 10px;
+        }
     }
+
     .row {
         @include row-flex();
         margin-top: 50px;
+
+        @include lg-block() {
+            margin-top: 10px;
+        }
 
         .item {
             @include col();
             @include size(4);
             display: flex;
             flex-direction: column;
-            min-height: 345px;
+            min-height: 325px;
+
+            @include lg-block() {
+                font-size: 14px;
+                min-height: 200px;
+            }
 
             &__time {
-                margin: 20px 0;
+                margin: 20px 0 auto;
+
+                @include lg-block() {
+                    margin: 10px 0 auto;
+                }
             }
 
             &__list {
                 li {
                     margin-top: 10px;
+
+                    @include lg-block() {
+                        margin-top: 3px;
+                        font-size: 12px;
+                    }
 
                     &::marker {
                         color: $blue;
@@ -205,10 +358,135 @@
             }
 
             &__cost {
-                margin-top: auto;
+                margin-top: 20px;
                 font-style: italic;
                 font-size: 20px;
                 color: white;
+
+                @include lg-block() {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.contacts {
+    background: $yellow;
+
+    .row {
+        @include row-flex();
+    }
+
+    .map,
+    .details {
+        @include col();
+        @include size(6);
+    }
+
+    .map {}
+
+    .details {
+        padding: 160px 0;
+
+        @include lg-block() {
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .adress {
+            margin: 50px 0;
+
+            @include lg-block() {
+                margin: 30px 0;
+                font-size: 18px;
+            }
+        }
+
+        .tel {
+            display: block;
+            text-decoration: none;
+            color: $text;
+
+            &+.tel {
+                margin-top: 3px;
+            }
+        }
+
+        .mail {
+            display: block;
+            margin-top: 50px;
+            color: $dark-blue;
+            text-decoration: none;
+
+            @include lg-block() {
+                margin-top: 15px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.footer {
+    background: $dark-blue;
+
+    .row {
+        @include row-flex();
+        min-height: 100px;
+
+        @include lg-block() {
+            min-height: 50px;
+        }
+
+        .copyright {
+            @include col();
+            @include size(6);
+            font-family: 'Lato', sans-serif;
+            font-size: 22px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+
+            @include lg-block() {
+                font-size: 14px;
+            }
+        }
+
+        .socials {
+            @include col();
+            @include size(6);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 20px;
+
+
+            a {
+
+                svg {
+                    path {
+                        transition: 0.3s ease;
+                    }
+
+                    @include lg-block() {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+
+                &:hover {
+
+                    svg {
+                        path {
+                            fill: $yellow;
+                        }
+                    }
+                }
+            }
+
+            a+a {
+                margin-left: 10px;
             }
         }
     }

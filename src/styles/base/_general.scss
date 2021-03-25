@@ -8,6 +8,7 @@ body {
     color: $text;
     @include lg(font-size, 16px);
     @include md(font-size, 10px);
+    background: #ffffff;
 }
 
 h1 {
@@ -17,6 +18,7 @@ h1 {
 }
 
 h2 {
+    font-family: 'Lato', sans-serif;
     font-size: 42px;
     @include lg(font-size, 26px);
     @include md(font-size, 14px);
@@ -36,6 +38,24 @@ h4 {
 
 section {
     margin: 50px auto;
+
+    @include lg-block() {
+        margin: 30px auto;
+    }
+
+    @include md-block() {
+        margin: 10px 0 0;
+    }
+}
+
+li {
+    position: relative;
+    &::marker {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        display: block;
+    }
 }
 .container {
     @include container();
