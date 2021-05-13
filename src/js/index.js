@@ -6,5 +6,9 @@ $(".js-menu-button").on("click", function() {
 $(".js-menu-button_close").on("click", function() {
     $(".js-menu").removeClass("burger-menu_open")
     $("body").css("overflow-y", "auto")
+})
 
+$(".js-menu-link").on("click", function() {
+    $(".js-menu").removeClass("burger-menu_open")
+    $("body").css("overflow-y", "auto")
 })
