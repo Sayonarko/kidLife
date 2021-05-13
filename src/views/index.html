@@ -35,6 +35,23 @@
 </head>
 
 <body>
+    <div class="burger-menu js-menu">
+        <div class="burger-menu__button-wrapper">
+            <button class="burger-menu__button js-menu-button_close">
+               <div class="button__line"></div>
+               <div class="button__line"></div>
+            </button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Главная</a></li>
+                <li><a href="#">о нас</a></li>
+                <li><a href="#">Программы</a></li>
+                <li><a href="#">стоимость</a></li>
+                <li><a href="#">контакты</a></li>
+            </ul>
+        </nav>
+    </div>
     <header class="header">
         <div class="container">
             <a href="/" class="logo">
@@ -49,12 +66,12 @@
                     <li><a href="#">контакты</a></li>
                 </ul>
             </nav>
-            <div class="m-menu">
-                <div class="burger">
+            <div class="m-menu js-menu-button">
+                <button class="burger">
                     <div class="burger__line"></div>
                     <div class="burger__line"></div>
                     <div class="burger__line"></div>
-                </div>
+                </button>
             </div>
         </div>
     </header>

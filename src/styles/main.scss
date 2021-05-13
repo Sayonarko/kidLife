@@ -4,6 +4,82 @@
 @import "base/fonts";
 @import "base/general";
 
+.burger-menu {
+    background-color: $dark-blue;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+
+    &__button-wrapper {
+        box-sizing: border-box;
+        text-align: right;
+        width: 100%;
+        padding: 15px 15px 150px 15px;
+    }
+
+    &__button {
+        background: transparent;
+        border: none;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button__line {
+        background-color: white;
+        width: 100%;
+        height: 3px;
+        border-radius: 1px;
+        transform-origin: 13px;
+        position: relative;
+
+        &:first-child {
+            transform: rotate(45deg);
+        }
+
+        &:last-child {
+            transform: rotate(-45deg);
+        }
+    }
+
+    li {
+        list-style: none;
+
+        & + li {
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 12px;
+            color: white;
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+
+            & + a {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.burger-menu_open {
+    transform: translateX(0%);
+
+}
+
 
 .header {
     .container {
@@ -106,6 +182,8 @@
                 display: none;
                 flex-direction: column;
                 padding-bottom: 2px;
+                background: transparent;
+                border: none;
 
                 @include md-block() {
                     display: flex;
@@ -118,7 +196,7 @@
                     border-radius: 1px;
 
                     & + .burger__line {
-                        margin-top: 1px;
+                        margin-top: 2px;
                     }
                 }
             }
